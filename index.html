@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>AI Anime Face Generator</title>
+
+<style>
+*{
+  box-sizing:border-box;
+  margin:0;
+  padding:0;
+}
+
+body{
+  font-family:Arial, sans-serif;
+  background:#0b0b12;
+  color:#fff;
+}
+
+/* HERO */
+.hero{
+  margin:15px;
+  padding:30px;
+  border-radius:20px;
+  background:linear-gradient(135deg,#7c4dff,#ff4ecd);
+  display:flex;
+  flex-wrap:wrap;
+  align-items:center;
+  gap:20px;
+}
+
+.hero-text{
+  flex:1;
+}
+
+.hero-text h1{
+  font-size:28px;
+  margin-bottom:10px;
+}
+
+.hero-text p{
+  color:#f0f0f0;
+  margin-bottom:20px;
+}
+
+.hero-text button{
+  padding:12px 22px;
+  border:none;
+  border-radius:14px;
+  background:#000;
+  color:#fff;
+  font-size:16px;
+  cursor:pointer;
+}
+
+.hero img{
+  width:260px;
+  max-width:100%;
+}
+
+/* SECTION */
+.section{
+  padding:20px;
+}
+
+/* BEFORE AFTER */
+.cards{
+  display:flex;
+  gap:15px;
+  flex-wrap:wrap;
+}
+
+.card{
+  flex:1;
+  min-width:140px;
+  background:#141420;
+  border-radius:18px;
+  padding:15px;
+  text-align:center;
+  box-shadow:0 0 20px rgba(124,77,255,.35);
+}
+
+.card img{
+  width:100%;
+  border-radius:12px;
+  margin-top:10px;
+}
+
+/* STEPS */
+.steps{
+  display:flex;
+  gap:15px;
+  flex-wrap:wrap;
+}
+
+.step{
+  flex:1;
+  min-width:120px;
+  background:#141420;
+  border-radius:16px;
+  padding:15px;
+}
+
+.step span{
+  color:#7c4dff;
+  font-weight:bold;
+}
+
+/* CTA */
+.cta{
+  margin:15px;
+  padding:25px;
+  background:#141420;
+  border-radius:20px;
+  text-align:center;
+}
+
+.cta button{
+  margin-top:15px;
+  padding:12px 26px;
+  border:none;
+  border-radius:14px;
+  background:linear-gradient(135deg,#7c4dff,#ff4ecd);
+  color:#fff;
+  font-size:16px;
+  cursor:pointer;
+}
+</style>
+</head>
+
+<body>
+
+<!-- HERO -->
+<div class="hero">
+  <div class="hero-text">
+    <h1>AI Anime Face Generator</h1>
+    <p>Turn your photo into anime & cartoon art using AI</p>
+    <button>Upload Photo</button>
+  </div>
+
+  <!-- HERO IMAGE -->
+  <img src="image/character.png" alt="Anime Character">
+</div>
+
+<!-- BEFORE / AFTER -->
+<div class="section">
+  <div class="cards">
+    <div class="card">
+      <b>Before</b>
+      <img id="beforeImg" src="image/before.jpg" alt="Before photo">
+    </div>
+    <div class="card">
+      <b>After</b>
+      <img id="afterImg" src="image/after.jpg" alt="After anime photo">
+    </div>
+  </div>
+</div>
+
+<!-- STEPS -->
+<div class="section">
+  <div class="steps">
+    <div class="step"><span>01</span><br>Upload Photo</div>
+    <div class="step"><span>02</span><br>AI Processing</div>
+    <div class="step"><span>03</span><br>Get Anime Face</div>
+  </div>
+</div>
+
+<!-- CTA -->
+<div class="cta">
+  <h2>Ready to see yourself as anime?</h2>
+
+  <input type="file" id="uploadInput" accept="image/*" hidden>
+  <button id="uploadBtn">🚀 Generate Anime Face</button>
+  <button id="downloadBtn" class="download-btn" style="display:none;">
+⬇ Download HD Anime
+</button>
+<button id="shareBtn" class="download-btn">
+  📢 Share with Friends
+</button>
+  <div class="trust-text">
+  🔒 We don’t store your photos<br>
+  ⚡ 100% Free & Fast<br>
+  📱 Works on Mobile
+</div>
+</div>
+<!-- LOADER -->
+<div id="loader" style="display:none; margin-top:15px;">
+  <p>AI Processing... 🤖✨</p>
+</div>
+<script src="script.js"></script>
+</body>
+</html>
+<div class="section">
+  <h2 style="text-align:center;">🎨 More AI Tools Coming Soon</h2>
+
+  <div class="cards">
+    <div class="card">AI Profile Pic</div>
+    <div class="card">AI Cartoon Video</div>
+    <div class="card">AI Passport Photo</div>
+  </div>
+</div>
